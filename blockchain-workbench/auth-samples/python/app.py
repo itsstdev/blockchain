@@ -16,7 +16,7 @@ if __name__ == '__main__':
         headers = {'Authorization': 'Bearer ' + token['accessToken']}
 
         # Making call to Workbench
-        response = requests.get(WORKBENCH_API_URL + '/api/v1/users', headers=headers)
+        response = requests.get(f'{WORKBENCH_API_URL}/api/v1/users', headers=headers)
         print (response.text)
     except Exception as error:
         print (error)

@@ -24,17 +24,17 @@ from six.moves import http_client as httplib
 
 
 class TypeWithDefault(type):
-    def __init__(cls, name, bases, dct):
-        super(TypeWithDefault, cls).__init__(name, bases, dct)
-        cls._default = None
+    def __init__(self, name, bases, dct):
+        super(TypeWithDefault, self).__init__(name, bases, dct)
+        self._default = None
 
-    def __call__(cls):
-        if cls._default is None:
-            cls._default = type.__call__(cls)
-        return copy.copy(cls._default)
+    def __call__(self):
+        if self._default is None:
+            self._default = type.__call__(self)
+        return copy.copy(self._default)
 
-    def set_default(cls, default):
-        cls._default = copy.copy(default)
+    def set_default(self, default):
+        self._default = copy.copy(default)
 
 
 class Configuration(six.with_metaclass(TypeWithDefault, object)):
@@ -203,11 +203,11 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         :param identifier: The identifier of apiKey.
         :return: The token for api key authentication.
         """
-        if (self.api_key.get(identifier) and
-                self.api_key_prefix.get(identifier)):
-            return self.api_key_prefix[identifier] + ' ' + self.api_key[identifier]  # noqa: E501
-        elif self.api_key.get(identifier):
-            return self.api_key[identifier]
+        if self.api_key.get(identifier):
+            if self.api_key_prefix.get(identifier):
+                return f'{self.api_key_prefix[identifier]} {self.api_key[identifier]}'
+            else:
+                return self.api_key[identifier]
 
     def get_basic_auth_token(self):
         """Gets HTTP basic authentication header (string).
@@ -215,7 +215,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         :return: The token for basic HTTP authentication.
         """
         return urllib3.util.make_headers(
-            basic_auth=self.username + ':' + self.password
+            basic_auth=f'{self.username}:{self.password}'
         ).get('authorization')
 
     def auth_settings(self):

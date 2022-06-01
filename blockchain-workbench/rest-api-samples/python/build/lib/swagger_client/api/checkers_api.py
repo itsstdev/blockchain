@@ -33,7 +33,7 @@ class CheckersApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def check_application_post(self, file, **kwargs):  # noqa: E501
+    def check_application_post(self, file, **kwargs):    # noqa: E501
         """Check validity of application configuration for Workbench  # noqa: E501
 
         Checks a configuration file  # noqa: E501
@@ -52,8 +52,7 @@ class CheckersApi(object):
         if kwargs.get('async'):
             return self.check_application_post_with_http_info(file, **kwargs)  # noqa: E501
         else:
-            (data) = self.check_application_post_with_http_info(file, **kwargs)  # noqa: E501
-            return data
+            return self.check_application_post_with_http_info(file, **kwargs)
 
     def check_application_post_with_http_info(self, file, **kwargs):  # noqa: E501
         """Check validity of application configuration for Workbench  # noqa: E501
@@ -128,7 +127,7 @@ class CheckersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def check_contract_code_post(self, **kwargs):  # noqa: E501
+    def check_contract_code_post(self, **kwargs):    # noqa: E501
         """Check validity of application ledger implementation for Workbench  # noqa: E501
 
         Checks a ledger implementation file against configuration file  # noqa: E501
@@ -147,8 +146,7 @@ class CheckersApi(object):
         if kwargs.get('async'):
             return self.check_contract_code_post_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.check_contract_code_post_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.check_contract_code_post_with_http_info(**kwargs)
 
     def check_contract_code_post_with_http_info(self, **kwargs):  # noqa: E501
         """Check validity of application ledger implementation for Workbench  # noqa: E501

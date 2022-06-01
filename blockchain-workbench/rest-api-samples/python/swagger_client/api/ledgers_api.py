@@ -33,7 +33,7 @@ class LedgersApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def ledgers_get(self, **kwargs):  # noqa: E501
+    def ledgers_get(self, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Lists the supported blockchain types, such as Ethereum or Hyperledger Fabric.  # noqa: E501
@@ -53,8 +53,7 @@ class LedgersApi(object):
         if kwargs.get('async'):
             return self.ledgers_get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.ledgers_get_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.ledgers_get_with_http_info(**kwargs)
 
     def ledgers_get_with_http_info(self, **kwargs):  # noqa: E501
         """  # noqa: E501

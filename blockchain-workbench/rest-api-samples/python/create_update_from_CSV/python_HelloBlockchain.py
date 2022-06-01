@@ -90,12 +90,11 @@ def create_contract(workflowId, contractCodeId, connectionId, payload):
                    token['accessToken'], 'Content-Type': 'application/json'}
 
             params = {'workflowId': workflowId, 'contractCodeId': contractCodeId, 'connectionId': connectionId}
-
         # Making call to Workbench
             response = requests.post(url=url,data=payload,headers=headers,params=params)
 
-            print('Status code: ' + str(response.status_code), '\n')
-            print('Created contractId: ' + str(response.text), '\n', '\n')
+            print(f'Status code: {str(response.status_code)}', '\n')
+            print(f'Created contractId: {str(response.text)}', '\n', '\n')
             return response
         except Exception as error:
             print(error)
@@ -117,12 +116,11 @@ def update_contract(contractId, payload):
                    token['accessToken'], 'Content-Type': 'application/json'}
 
             # params = {}
-
         # Making call to Workbench
             response = requests.post(url=url,data=payload,headers=headers)
 
-            print('Status code: ' + str(response.status_code), '\n')
-            print('Response: ' + str(response.text), '\n', '\n')
+            print(f'Status code: {str(response.status_code)}', '\n')
+            print(f'Response: {str(response.text)}', '\n', '\n')
             return response
         except Exception as error:
             print(error)

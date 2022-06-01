@@ -33,7 +33,7 @@ class GraphProxyApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def graph_proxy_users_get(self, version, **kwargs):  # noqa: E501
+    def graph_proxy_users_get(self, version, **kwargs):    # noqa: E501
         """Get Users from AAD Graph  # noqa: E501
 
         Proxies query parameters to AAD graph  # noqa: E501
@@ -52,8 +52,7 @@ class GraphProxyApi(object):
         if kwargs.get('async'):
             return self.graph_proxy_users_get_with_http_info(version, **kwargs)  # noqa: E501
         else:
-            (data) = self.graph_proxy_users_get_with_http_info(version, **kwargs)  # noqa: E501
-            return data
+            return self.graph_proxy_users_get_with_http_info(version, **kwargs)
 
     def graph_proxy_users_get_with_http_info(self, version, **kwargs):  # noqa: E501
         """Get Users from AAD Graph  # noqa: E501

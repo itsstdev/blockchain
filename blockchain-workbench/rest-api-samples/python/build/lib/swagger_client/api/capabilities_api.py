@@ -33,7 +33,7 @@ class CapabilitiesApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def can_create_contract(self, workflow_id, **kwargs):  # noqa: E501
+    def can_create_contract(self, workflow_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Checks if user can modify user role mappings  # noqa: E501
@@ -52,8 +52,7 @@ class CapabilitiesApi(object):
         if kwargs.get('async'):
             return self.can_create_contract_with_http_info(workflow_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.can_create_contract_with_http_info(workflow_id, **kwargs)  # noqa: E501
-            return data
+            return self.can_create_contract_with_http_info(workflow_id, **kwargs)
 
     def can_create_contract_with_http_info(self, workflow_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -124,7 +123,7 @@ class CapabilitiesApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def capabilities_get(self, **kwargs):  # noqa: E501
+    def capabilities_get(self, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Checks if user can upload application  # noqa: E501
@@ -142,8 +141,7 @@ class CapabilitiesApi(object):
         if kwargs.get('async'):
             return self.capabilities_get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.capabilities_get_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.capabilities_get_with_http_info(**kwargs)
 
     def capabilities_get_with_http_info(self, **kwargs):  # noqa: E501
         """  # noqa: E501

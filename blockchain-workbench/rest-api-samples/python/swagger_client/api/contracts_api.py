@@ -33,7 +33,7 @@ class ContractsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def contract_action_get(self, contract_id, action_id, **kwargs):  # noqa: E501
+    def contract_action_get(self, contract_id, action_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Gets the action matching the specified action ID. Users get the action if the user can take the action              given the current state of the specified smart contract instance and the user's associated application role or smart              contract instance role.  # noqa: E501
@@ -53,8 +53,9 @@ class ContractsApi(object):
         if kwargs.get('async'):
             return self.contract_action_get_with_http_info(contract_id, action_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.contract_action_get_with_http_info(contract_id, action_id, **kwargs)  # noqa: E501
-            return data
+            return self.contract_action_get_with_http_info(
+                contract_id, action_id, **kwargs
+            )
 
     def contract_action_get_with_http_info(self, contract_id, action_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -132,7 +133,7 @@ class ContractsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def contract_action_post(self, contract_id, **kwargs):  # noqa: E501
+    def contract_action_post(self, contract_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Executes an action for the specified smart contract instance and action ID. Users are only able to execute              the action given the current state of the specified smart contract instance and the user's associated application role              or smart contract instance role.  # noqa: E501
@@ -152,8 +153,7 @@ class ContractsApi(object):
         if kwargs.get('async'):
             return self.contract_action_post_with_http_info(contract_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.contract_action_post_with_http_info(contract_id, **kwargs)  # noqa: E501
-            return data
+            return self.contract_action_post_with_http_info(contract_id, **kwargs)
 
     def contract_action_post_with_http_info(self, contract_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -231,7 +231,7 @@ class ContractsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def contract_actions_get(self, contract_id, **kwargs):  # noqa: E501
+    def contract_actions_get(self, contract_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Lists all actions, which can be taken by the given user and current state of the specified smart contract              instance. Users get all applicable actions if the user has an associated application role or is associated with a smart              contract instance role for the current state of the specified smart contract instance.  # noqa: E501
@@ -252,8 +252,7 @@ class ContractsApi(object):
         if kwargs.get('async'):
             return self.contract_actions_get_with_http_info(contract_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.contract_actions_get_with_http_info(contract_id, **kwargs)  # noqa: E501
-            return data
+            return self.contract_actions_get_with_http_info(contract_id, **kwargs)
 
     def contract_actions_get_with_http_info(self, contract_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -330,7 +329,7 @@ class ContractsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def contract_get(self, contract_id, **kwargs):  # noqa: E501
+    def contract_get(self, contract_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Creates and deploys a new smart contract instance by adding the instance to the Workbench database and              sending a transaction to the blockchain. This method can only be performed by users who are specified within the              Initiators collection of the workflow within the Workbench application configuration.  # noqa: E501
@@ -349,8 +348,7 @@ class ContractsApi(object):
         if kwargs.get('async'):
             return self.contract_get_with_http_info(contract_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.contract_get_with_http_info(contract_id, **kwargs)  # noqa: E501
-            return data
+            return self.contract_get_with_http_info(contract_id, **kwargs)
 
     def contract_get_with_http_info(self, contract_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -421,7 +419,7 @@ class ContractsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def contract_post(self, **kwargs):  # noqa: E501
+    def contract_post(self, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Gets the smart contract instance matching a specific workflow instance ID. Users who are Workbench              administrators get the smart contract instance. Non-Workbench administrators get the smart contract instance              if they have at least one associated application role or is associated with the smart contract instance.  # noqa: E501
@@ -443,8 +441,7 @@ class ContractsApi(object):
         if kwargs.get('async'):
             return self.contract_post_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.contract_post_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.contract_post_with_http_info(**kwargs)
 
     def contract_post_with_http_info(self, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -524,7 +521,7 @@ class ContractsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def contracts_get(self, **kwargs):  # noqa: E501
+    def contracts_get(self, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Lists the smart contract instances of the specified workflow. Users who are Workbench administrators get all              smart contract instances. Non-Workbench administrators get all smart contract instances for which they have at least              one associated application role or is associated with a smart contract instance role.  # noqa: E501
@@ -545,8 +542,7 @@ class ContractsApi(object):
         if kwargs.get('async'):
             return self.contracts_get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.contracts_get_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.contracts_get_with_http_info(**kwargs)
 
     def contracts_get_with_http_info(self, **kwargs):  # noqa: E501
         """  # noqa: E501
