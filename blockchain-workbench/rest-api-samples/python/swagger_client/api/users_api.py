@@ -33,7 +33,7 @@ class UsersApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def me_get(self, **kwargs):  # noqa: E501
+    def me_get(self, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Returns the current user  # noqa: E501
@@ -51,8 +51,7 @@ class UsersApi(object):
         if kwargs.get('async'):
             return self.me_get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.me_get_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.me_get_with_http_info(**kwargs)
 
     def me_get_with_http_info(self, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -116,7 +115,7 @@ class UsersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def user_delete(self, user_id, **kwargs):  # noqa: E501
+    def user_delete(self, user_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Deletes the specified user. This method can only be performed by users who are Workbench administrators.              NOTE: Not currently implemented.  # noqa: E501
@@ -135,8 +134,7 @@ class UsersApi(object):
         if kwargs.get('async'):
             return self.user_delete_with_http_info(user_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.user_delete_with_http_info(user_id, **kwargs)  # noqa: E501
-            return data
+            return self.user_delete_with_http_info(user_id, **kwargs)
 
     def user_delete_with_http_info(self, user_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -207,7 +205,7 @@ class UsersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def user_get(self, user_id, **kwargs):  # noqa: E501
+    def user_get(self, user_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Gets the user matching a specific user ID.  # noqa: E501
@@ -226,8 +224,7 @@ class UsersApi(object):
         if kwargs.get('async'):
             return self.user_get_with_http_info(user_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.user_get_with_http_info(user_id, **kwargs)  # noqa: E501
-            return data
+            return self.user_get_with_http_info(user_id, **kwargs)
 
     def user_get_with_http_info(self, user_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -298,7 +295,7 @@ class UsersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def users_get(self, **kwargs):  # noqa: E501
+    def users_get(self, **kwargs):    # noqa: E501
         """Get Users  # noqa: E501
 
         Lists all users within the connected blockchain consortium.  # noqa: E501
@@ -320,8 +317,7 @@ class UsersApi(object):
         if kwargs.get('async'):
             return self.users_get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.users_get_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.users_get_with_http_info(**kwargs)
 
     def users_get_with_http_info(self, **kwargs):  # noqa: E501
         """Get Users  # noqa: E501
@@ -397,7 +393,7 @@ class UsersApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def users_post(self, **kwargs):  # noqa: E501
+    def users_post(self, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Adds a user to the blockchain consortium. This method can only be performed by users who are              Workbench administrators.  # noqa: E501
@@ -416,8 +412,7 @@ class UsersApi(object):
         if kwargs.get('async'):
             return self.users_post_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.users_post_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.users_post_with_http_info(**kwargs)
 
     def users_post_with_http_info(self, **kwargs):  # noqa: E501
         """  # noqa: E501

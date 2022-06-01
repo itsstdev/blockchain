@@ -33,7 +33,7 @@ class ConnectionsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def block_get(self, connection_id, block_id, **kwargs):  # noqa: E501
+    def block_get(self, connection_id, block_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Gets the block matching a specific block ID.  # noqa: E501
@@ -53,8 +53,7 @@ class ConnectionsApi(object):
         if kwargs.get('async'):
             return self.block_get_with_http_info(connection_id, block_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.block_get_with_http_info(connection_id, block_id, **kwargs)  # noqa: E501
-            return data
+            return self.block_get_with_http_info(connection_id, block_id, **kwargs)
 
     def block_get_with_http_info(self, connection_id, block_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -132,7 +131,7 @@ class ConnectionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def blocks_get(self, connection_id, **kwargs):  # noqa: E501
+    def blocks_get(self, connection_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Lists the blocks for a connected blockchain network.  # noqa: E501
@@ -153,8 +152,7 @@ class ConnectionsApi(object):
         if kwargs.get('async'):
             return self.blocks_get_with_http_info(connection_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.blocks_get_with_http_info(connection_id, **kwargs)  # noqa: E501
-            return data
+            return self.blocks_get_with_http_info(connection_id, **kwargs)
 
     def blocks_get_with_http_info(self, connection_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -231,7 +229,7 @@ class ConnectionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def connection_get(self, connection_id, **kwargs):  # noqa: E501
+    def connection_get(self, connection_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Gets the connected blockchain network matching a specific chain instance ID.  # noqa: E501
@@ -250,8 +248,7 @@ class ConnectionsApi(object):
         if kwargs.get('async'):
             return self.connection_get_with_http_info(connection_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.connection_get_with_http_info(connection_id, **kwargs)  # noqa: E501
-            return data
+            return self.connection_get_with_http_info(connection_id, **kwargs)
 
     def connection_get_with_http_info(self, connection_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -322,7 +319,7 @@ class ConnectionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def connections_get(self, **kwargs):  # noqa: E501
+    def connections_get(self, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Lists the connected blockchain networks.  # noqa: E501
@@ -342,8 +339,7 @@ class ConnectionsApi(object):
         if kwargs.get('async'):
             return self.connections_get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.connections_get_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.connections_get_with_http_info(**kwargs)
 
     def connections_get_with_http_info(self, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -413,7 +409,7 @@ class ConnectionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def transaction_get(self, connection_id, transaction_id, **kwargs):  # noqa: E501
+    def transaction_get(self, connection_id, transaction_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Gets the transaction matching a specific transaction ID.  # noqa: E501
@@ -433,8 +429,9 @@ class ConnectionsApi(object):
         if kwargs.get('async'):
             return self.transaction_get_with_http_info(connection_id, transaction_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.transaction_get_with_http_info(connection_id, transaction_id, **kwargs)  # noqa: E501
-            return data
+            return self.transaction_get_with_http_info(
+                connection_id, transaction_id, **kwargs
+            )
 
     def transaction_get_with_http_info(self, connection_id, transaction_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -512,7 +509,7 @@ class ConnectionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def transactions_get(self, connection_id, **kwargs):  # noqa: E501
+    def transactions_get(self, connection_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Lists the transactions for a connected blockchain network.  # noqa: E501
@@ -533,8 +530,7 @@ class ConnectionsApi(object):
         if kwargs.get('async'):
             return self.transactions_get_with_http_info(connection_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.transactions_get_with_http_info(connection_id, **kwargs)  # noqa: E501
-            return data
+            return self.transactions_get_with_http_info(connection_id, **kwargs)
 
     def transactions_get_with_http_info(self, connection_id, **kwargs):  # noqa: E501
         """  # noqa: E501

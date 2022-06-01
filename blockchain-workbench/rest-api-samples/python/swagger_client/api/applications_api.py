@@ -33,7 +33,7 @@ class ApplicationsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def application_delete(self, application_id, **kwargs):  # noqa: E501
+    def application_delete(self, application_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Deletes the specified blockchain application. This method can only be performed by users who are              Workbench administrators. NOTE: Currently not implemented.  # noqa: E501
@@ -52,8 +52,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.application_delete_with_http_info(application_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.application_delete_with_http_info(application_id, **kwargs)  # noqa: E501
-            return data
+            return self.application_delete_with_http_info(application_id, **kwargs)
 
     def application_delete_with_http_info(self, application_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -124,7 +123,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def application_disable(self, application_id, **kwargs):  # noqa: E501
+    def application_disable(self, application_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Disables the specified blockchain application. This method can only be performed by users who are              Workbench administrators.  # noqa: E501
@@ -143,8 +142,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.application_disable_with_http_info(application_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.application_disable_with_http_info(application_id, **kwargs)  # noqa: E501
-            return data
+            return self.application_disable_with_http_info(application_id, **kwargs)
 
     def application_disable_with_http_info(self, application_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -215,7 +213,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def application_enable(self, application_id, **kwargs):  # noqa: E501
+    def application_enable(self, application_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Enables the specified blockchain application. This method can only be performed by users who are              Workbench administrators.  # noqa: E501
@@ -234,8 +232,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.application_enable_with_http_info(application_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.application_enable_with_http_info(application_id, **kwargs)  # noqa: E501
-            return data
+            return self.application_enable_with_http_info(application_id, **kwargs)
 
     def application_enable_with_http_info(self, application_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -306,7 +303,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def application_get(self, application_id, **kwargs):  # noqa: E501
+    def application_get(self, application_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Gets the blockchain application matching a specific application ID. Users who are Workbench administrators get              the blockchain application. Non-Workbench administrators get the blockchain application if they have at least one associated              application role or is associated with a smart contract instance role.  # noqa: E501
@@ -325,8 +322,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.application_get_with_http_info(application_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.application_get_with_http_info(application_id, **kwargs)  # noqa: E501
-            return data
+            return self.application_get_with_http_info(application_id, **kwargs)
 
     def application_get_with_http_info(self, application_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -397,7 +393,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def applications_get(self, **kwargs):  # noqa: E501
+    def applications_get(self, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Lists all blockchain applications to which a user has access in Workbench. Users who are Workbench administrators get              all blockchain applications. Non-Workbench administrators get all blockchain applications for which they have at least one              associated application role or an associated smart contract instance role.  # noqa: E501
@@ -418,8 +414,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.applications_get_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.applications_get_with_http_info(**kwargs)  # noqa: E501
-            return data
+            return self.applications_get_with_http_info(**kwargs)
 
     def applications_get_with_http_info(self, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -492,7 +487,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def applications_post(self, file, **kwargs):  # noqa: E501
+    def applications_post(self, file, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Creates a new blockchain application. This method can only be performed by users who are              Workbench administrators.  # noqa: E501
@@ -511,8 +506,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.applications_post_with_http_info(file, **kwargs)  # noqa: E501
         else:
-            (data) = self.applications_post_with_http_info(file, **kwargs)  # noqa: E501
-            return data
+            return self.applications_post_with_http_info(file, **kwargs)
 
     def applications_post_with_http_info(self, file, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -587,7 +581,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def contract_code_delete(self, contract_code_id, **kwargs):  # noqa: E501
+    def contract_code_delete(self, contract_code_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Deletes the specified blockchain smart contract implementation of a specific blockchain application.              This method can only be performed by users who are Workbench administrators.              NOTE: not currently implemented  # noqa: E501
@@ -606,8 +600,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.contract_code_delete_with_http_info(contract_code_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.contract_code_delete_with_http_info(contract_code_id, **kwargs)  # noqa: E501
-            return data
+            return self.contract_code_delete_with_http_info(contract_code_id, **kwargs)
 
     def contract_code_delete_with_http_info(self, contract_code_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -678,7 +671,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def contract_code_get(self, contract_code_id, **kwargs):  # noqa: E501
+    def contract_code_get(self, contract_code_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Get the blockchain smart contract implementation matching a specific              ledger implementation ID. Users who are Workbench administrators get the specified smart contract implementation.              Non-Workbench administrators get the smart contract implementation if they have at least one associated application              role or is associated with a smart contract instance role.  # noqa: E501
@@ -697,8 +690,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.contract_code_get_with_http_info(contract_code_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.contract_code_get_with_http_info(contract_code_id, **kwargs)  # noqa: E501
-            return data
+            return self.contract_code_get_with_http_info(contract_code_id, **kwargs)
 
     def contract_code_get_with_http_info(self, contract_code_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -769,7 +761,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def contract_code_post(self, application_id, file, **kwargs):  # noqa: E501
+    def contract_code_post(self, application_id, file, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Uploads one or more smart contracts (ex. .sol or .zip), representing the implementation of the specified blockchain              application. This method can only be performed by users who are Workbench administrators.  # noqa: E501
@@ -790,8 +782,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.contract_code_post_with_http_info(application_id, file, **kwargs)  # noqa: E501
         else:
-            (data) = self.contract_code_post_with_http_info(application_id, file, **kwargs)  # noqa: E501
-            return data
+            return self.contract_code_post_with_http_info(application_id, file, **kwargs)
 
     def contract_code_post_with_http_info(self, application_id, file, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -876,7 +867,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def contract_codes_get(self, application_id, **kwargs):  # noqa: E501
+    def contract_codes_get(self, application_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         List all blockchain smart contract implementations of the specified blockchain application.              Users who are Workbench administrators get all smart contract implementations. Non-Workbench administrators get all              smart contract implementations for which they have at least one associated application role or is associated with a              smart contract instance role.  # noqa: E501
@@ -898,8 +889,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.contract_codes_get_with_http_info(application_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.contract_codes_get_with_http_info(application_id, **kwargs)  # noqa: E501
-            return data
+            return self.contract_codes_get_with_http_info(application_id, **kwargs)
 
     def contract_codes_get_with_http_info(self, application_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -979,7 +969,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def role_assignment_delete(self, application_id, role_assignment_id, **kwargs):  # noqa: E501
+    def role_assignment_delete(self, application_id, role_assignment_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Deletes the specified role assignment. This method can only be performed by users who are              Workbench administrators.  # noqa: E501
@@ -999,8 +989,9 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.role_assignment_delete_with_http_info(application_id, role_assignment_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.role_assignment_delete_with_http_info(application_id, role_assignment_id, **kwargs)  # noqa: E501
-            return data
+            return self.role_assignment_delete_with_http_info(
+                application_id, role_assignment_id, **kwargs
+            )
 
     def role_assignment_delete_with_http_info(self, application_id, role_assignment_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -1078,7 +1069,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def role_assignment_get(self, application_id, role_assignment_id, **kwargs):  # noqa: E501
+    def role_assignment_get(self, application_id, role_assignment_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Get a role assignment of the specified blockchain application matching a specific user role assignment ID.              Users who are Workbench administrators get the role assignment. Non-Workbench administrators get the role assignment              if they are associated in the application.  # noqa: E501
@@ -1098,8 +1089,9 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.role_assignment_get_with_http_info(application_id, role_assignment_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.role_assignment_get_with_http_info(application_id, role_assignment_id, **kwargs)  # noqa: E501
-            return data
+            return self.role_assignment_get_with_http_info(
+                application_id, role_assignment_id, **kwargs
+            )
 
     def role_assignment_get_with_http_info(self, application_id, role_assignment_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -1177,7 +1169,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def role_assignments_get(self, application_id, **kwargs):  # noqa: E501
+    def role_assignments_get(self, application_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         List all role assignments of the specified blockchain application. Users who are Workbench administrators              get all role assignments. Non-Workbench administrators get all their role assignments. Roles are specified              in the Workbench application configuration and can be retrieved from GET /applications/{applicationID}.              Also, user information can be retrieved from GET /users/{userID}.  # noqa: E501
@@ -1199,8 +1191,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.role_assignments_get_with_http_info(application_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.role_assignments_get_with_http_info(application_id, **kwargs)  # noqa: E501
-            return data
+            return self.role_assignments_get_with_http_info(application_id, **kwargs)
 
     def role_assignments_get_with_http_info(self, application_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -1280,7 +1271,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def role_assignments_post(self, application_id, **kwargs):  # noqa: E501
+    def role_assignments_post(self, application_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Creates a user-to-role mapping in the specified blockchain application. This method can only be performed by              users who are Workbench administrators.  # noqa: E501
@@ -1300,8 +1291,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.role_assignments_post_with_http_info(application_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.role_assignments_post_with_http_info(application_id, **kwargs)  # noqa: E501
-            return data
+            return self.role_assignments_post_with_http_info(application_id, **kwargs)
 
     def role_assignments_post_with_http_info(self, application_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -1379,7 +1369,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def workflow_get(self, workflow_id, **kwargs):  # noqa: E501
+    def workflow_get(self, workflow_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         Get a workflow matching a specific workflow ID.              Users who are Workbench administrators get the workflow. Non-Workbench administrators get the workflow if they              have at least one associated application role or is associated with a smart contract instance role.  # noqa: E501
@@ -1398,8 +1388,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.workflow_get_with_http_info(workflow_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.workflow_get_with_http_info(workflow_id, **kwargs)  # noqa: E501
-            return data
+            return self.workflow_get_with_http_info(workflow_id, **kwargs)
 
     def workflow_get_with_http_info(self, workflow_id, **kwargs):  # noqa: E501
         """  # noqa: E501
@@ -1470,7 +1459,7 @@ class ApplicationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def workflows_get(self, application_id, **kwargs):  # noqa: E501
+    def workflows_get(self, application_id, **kwargs):    # noqa: E501
         """  # noqa: E501
 
         List all workflows of the specified blockchain application. Users who are Workbench administrators get all              workflows. Non-Workbench administrators get all workflows for which they have at least one associated application role              or is associated with a smart contract instance role.  # noqa: E501
@@ -1491,8 +1480,7 @@ class ApplicationsApi(object):
         if kwargs.get('async'):
             return self.workflows_get_with_http_info(application_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.workflows_get_with_http_info(application_id, **kwargs)  # noqa: E501
-            return data
+            return self.workflows_get_with_http_info(application_id, **kwargs)
 
     def workflows_get_with_http_info(self, application_id, **kwargs):  # noqa: E501
         """  # noqa: E501
